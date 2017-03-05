@@ -6,10 +6,10 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne={
-    title:"Article one| Yusuf ",
-    heading:"Article one",
-    date:"20 feb 2017"
-    content:"<p>
+    title:'Article one| Yusuf ',
+    heading:'Article one',
+    date:'20 feb 2017',
+    content:`<p>
            This is my first article and i m writig some meaningless words so just stop and dont read it further, r u still reading ? huh ok keep wasting ur time u r not gonna find anything useful or which make sense but if u still keep reading, u r dumb as fuck... just stop u peace of shit... u r so stubborn u r not gonna stop right? ok fine i dont care :p
         </p>
         <p>
@@ -17,7 +17,7 @@ var articleOne={
         </p>
         <p>
             Agin blah blah
-        </p>"
+        </p>`
     
 };
 function createTemplate(data){
@@ -25,7 +25,7 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmlTemplate="
+var htmlTemplate=`
 <html>
     <head>
         <title>$(title)</title>
@@ -43,7 +43,7 @@ var htmlTemplate="
         </div>
         </div>
     </body>
-</html>";
+</html>`;
 return htmlTemplate;
     
 }
